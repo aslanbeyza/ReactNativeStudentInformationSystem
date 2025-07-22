@@ -8,6 +8,18 @@ Modern ve kullanıcı dostu **Öğrenci Bilgi Sistemi (OBS)** mobil uygulaması.
 ![TypeScript](https://img.shields.io/badge/TypeScript-~5.8.3-blue)
 
 ## 📱 Ekran Görüntüleri
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 23 05" src="https://github.com/user-attachments/assets/12adfdc7-1f42-46ed-bf47-dc48c6f985ef" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 58" src="https://github.com/user-attachments/assets/5a669f95-e955-497b-acdd-e5345e09f67b" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 51" src="https://github.com/user-attachments/assets/44172cd9-ccca-40c0-8ea9-94eaf34749b8" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 46" src="https://github.com/user-attachments/assets/3bac1ee3-7925-4704-a844-614f0689025e" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 38" src="https://github.com/user-attachments/assets/b7f433c3-6255-4eaa-8fe3-f15541275f01" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 30" src="https://github.com/user-attachments/assets/c77c7598-62ad-4b5c-b0c3-69e32575c9ff" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 24" src="https://github.com/user-attachments/assets/18eb4e55-ad18-42bd-9c7c-71d939fdd5de" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 21 35" src="https://github.com/user-attachments/assets/48c677cd-6595-46e6-9daf-21c02b538115" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 19" src="https://github.com/user-attachments/assets/833c8a81-f20a-4579-8625-41877ca35507" />
+<img width="557" height="810" alt="Ekran Resmi 2025-07-22 03 22 06" src="https://github.com/user-attachments/assets/d9dff8eb-0a94-4288-b86f-f54f9ef0dfc7" />
+
+
 
 Uygulama, İstanbul Zaim Üniversitesi'nin kurumsal kimliğini yansıtan kırmızı/bordo tema ile tasarlanmıştır.
 
