@@ -1,50 +1,367 @@
-# Welcome to your Expo app 👋
+# 🎓 İstanbul Zaim Üniversitesi OBS Mobil Uygulaması
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Modern ve kullanıcı dostu **Öğrenci Bilgi Sistemi (OBS)** mobil uygulaması. React Native ve Expo Router ile geliştirilmiş, modüler ve reusable bileşenler kullanan bir uygulama.
 
-## Get started
+![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android-blue)
+![React Native](https://img.shields.io/badge/React%20Native-0.79.5-green)
+![Expo](https://img.shields.io/badge/Expo-~53.0.20-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-~5.8.3-blue)
 
-1. Install dependencies
+## 📱 Ekran Görüntüleri
 
-   ```bash
-   npm install
-   ```
+Uygulama, İstanbul Zaim Üniversitesi'nin kurumsal kimliğini yansıtan kırmızı/bordo tema ile tasarlanmıştır.
 
-2. Start the app
+## ✨ Özellikler
 
-   ```bash
-   npx expo start
-   ```
+### 🎨 **Modern Tasarım**
+- İstanbul Zaim Üniversitesi kurumsal kimliği
+- Responsive ve kullanıcı dostu arayüz
+- Animasyonlu geçişler ve etkileşimler
+- Dark/Light mode desteği (gelecek güncellemede)
 
-In the output, you'll find options to open the app in a
+### 🔐 **Güvenli Giriş**
+- Öğrenci numarası ve şifre ile giriş
+- JWT token tabanlı kimlik doğrulama
+- Otomatik oturum yönetimi
+- Güvenli veri saklama
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 📚 **Akademik Modüller**
+- **Ana Sayfa**: Hızlı erişim ve duyurular
+- **Dersler**: Kayıtlı dersler ve detayları
+- **Notlar**: Sınav sonuçları ve GPA takibi
+- **Ders Programı**: Haftalık çizelge ve sınıf bilgileri
+- **Profil**: Kişisel bilgiler ve ayarlar
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🛠 **Teknik Özellikler**
+- **TypeScript**: Tip güvenliği
+- **Modüler Yapı**: Reusable bileşenler
+- **Offline Support**: Veri önbellekleme
+- **Real-time Updates**: Pull-to-refresh
+- **Error Handling**: Kullanıcı dostu hata yönetimi
 
-## Get a fresh project
+## 🚀 Kurulum
 
-When you're ready, run:
+### Gereksinimler
+- Node.js (18.x veya üzeri)
+- npm veya yarn
+- Expo CLI
+- iOS Simulator veya Android Emulator
 
+### 1. Projeyi İndirin
 ```bash
-npm run reset-project
+git clone <repository-url>
+cd mobile
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Bağımlılıkları Yükleyin
+```bash
+npm install
+# veya
+yarn install
+```
 
-## Learn more
+### 3. Uygulamayı Başlatın
+```bash
+npm start
+# veya
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 4. Cihazda Çalıştırın
+```bash
+# iOS için
+npm run ios
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+# Android için
+npm run android
 
-## Join the community
+# Web için
+npm run web
+```
 
-Join our community of developers creating universal apps.
+## 📋 Demo Giriş Bilgileri
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Uygulamayı test etmek için aşağıdaki demo hesabını kullanabilirsiniz:
+
+```
+Öğrenci Numarası: 123456
+Şifre: 123456
+```
+
+## 📁 Proje Yapısı
+
+```
+mobile/
+├── app/                          # Expo Router sayfaları
+│   ├── screens/                  # Ana ekranlar
+│   │   ├── SplashScreen.tsx     # Açılış ekranı
+│   │   └── LoginScreen.tsx      # Giriş ekranı
+│   ├── (tabs)/                  # Tab navigation
+│   │   ├── _layout.tsx          # Tab layout yapılandırması
+│   │   ├── index.tsx            # Ana sayfa (Dashboard)
+│   │   ├── courses.tsx          # Dersler
+│   │   ├── grades.tsx           # Notlar
+│   │   ├── schedule.tsx         # Ders Programı
+│   │   └── profile.tsx          # Profil
+│   ├── index.tsx                # Ana routing
+│   └── login.tsx                # Login route
+├── components/                   # React bileşenleri
+│   └── ui/                      # Reusable UI bileşenleri
+│       ├── Button.tsx           # Buton bileşeni
+│       ├── Input.tsx            # Input bileşeni
+│       ├── Card.tsx             # Kart bileşeni
+│       ├── Logo.tsx             # Logo bileşeni
+│       └── index.ts             # Bileşen export'ları
+├── constants/                    # Sabitler ve design system
+│   ├── Colors.ts                # Renk paleti
+│   ├── Typography.ts            # Font sistemi
+│   ├── Spacing.ts               # Boşluk sistemi
+│   └── index.ts                 # Constant export'ları
+├── types/                       # TypeScript tip tanımları
+│   └── index.ts                 # Ana tip dosyası
+├── utils/                       # Utility fonksiyonları
+│   ├── api.ts                   # API client ve helper'lar
+│   └── storage.ts               # Local storage yönetimi
+├── assets/                      # Görseller ve fontlar
+├── hooks/                       # Custom React hooks
+└── services/                    # Servis katmanı
+```
+
+## 🎨 Design System
+
+### Renk Paleti
+```typescript
+// Ana renkler
+primary: '#DC143C',      // Zaim Üniversitesi kırmızısı
+primaryDark: '#B91C3C',  // Koyu kırmızı varyantı
+secondary: '#F8F9FA',    // Açık gri arka plan
+success: '#22C55E',      // Başarı yeşili
+warning: '#F59E0B',      // Uyarı turuncusu
+error: '#EF4444',        // Hata kırmızısı
+```
+
+### Typography Sistemi
+- **Başlıklar**: h1 (30px), h2 (24px), h3 (20px), h4 (18px)
+- **Gövde Metni**: body (16px), bodySmall (14px), caption (12px)
+- **Font Ağırlıkları**: normal, medium, semibold, bold
+
+### Spacing Sistemi
+- 4px grid sistemi tabanlı tutarlı boşluklar
+- Component padding: xs (8px), sm (12px), md (16px), lg (20px)
+- Ekran padding: horizontal (16px), vertical (20px)
+
+## 🔌 API Entegrasyonu
+
+### Endpoint'ler
+```typescript
+// Kimlik doğrulama
+POST /auth/login
+POST /auth/logout
+POST /auth/refresh
+
+// Kullanıcı
+GET /user/me
+PUT /user/profile
+POST /user/change-password
+
+// Dersler
+GET /courses
+GET /courses/:id
+
+// Notlar
+GET /grades
+GET /grades/transcript
+
+// Ders Programı
+GET /schedule
+
+// Duyurular
+GET /announcements
+POST /announcements/:id/read
+```
+
+### API Client Kullanımı
+```typescript
+import { apiClient } from './utils/api';
+
+// Giriş yapma
+const response = await apiClient.login({
+  studentNumber: '123456',
+  password: '123456'
+});
+
+// Dersler getirme
+const courses = await apiClient.getCourses();
+```
+
+## 💾 Veri Yönetimi
+
+### Local Storage
+- **AsyncStorage** ile güvenli veri saklama
+- Kimlik doğrulama token'ları
+- Kullanıcı tercihleri ve ayarları
+- Offline veri önbellekleme
+
+### Cache Sistemi
+```typescript
+import { storage } from './utils/storage';
+
+// Cache'e veri kaydetme
+await storage.setCacheData('courses', coursesData, 3600000); // 1 saat
+
+// Cache'den veri okuma
+const cachedCourses = await storage.getCacheData('courses');
+```
+
+## 🧪 Test
+
+```bash
+# Unit testler
+npm test
+
+# E2E testler
+npm run test:e2e
+
+# Test coverage
+npm run test:coverage
+```
+
+## 📦 Build
+
+### Development Build
+```bash
+npm run build:dev
+```
+
+### Production Build
+```bash
+# iOS
+npm run build:ios
+
+# Android
+npm run build:android
+```
+
+### EAS Build (Cloud)
+```bash
+npx eas build --platform all
+```
+
+## 🔧 Yapılandırma
+
+### Environment Variables
+`.env` dosyası oluşturun:
+```env
+API_BASE_URL=https://obs-api.izu.edu.tr/api/v1
+API_TIMEOUT=10000
+SENTRY_DSN=your_sentry_dsn_here
+```
+
+### App Config
+`app.json` dosyasında uygulama ayarlarını yapılandırın:
+```json
+{
+  "expo": {
+    "name": "İZÜ OBS",
+    "slug": "izu-obs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"]
+  }
+}
+```
+
+## 🚀 Deployment
+
+### App Store (iOS)
+1. Apple Developer hesabı gerekli
+2. EAS Build ile IPA oluşturun
+3. App Store Connect'e yükleyin
+
+### Google Play Store (Android)
+1. Google Play Console hesabı gerekli
+2. EAS Build ile AAB oluşturun
+3. Play Console'a yükleyin
+
+## 🛠 Geliştirme
+
+### Code Style
+- **ESLint** ve **Prettier** kullanımı
+- **TypeScript** strict mode
+- **Conventional Commits** formatı
+
+### Git Workflow
+```bash
+# Feature branch oluşturma
+git checkout -b feature/new-feature
+
+# Commit
+git commit -m "feat: add new feature"
+
+# Push ve Pull Request
+git push origin feature/new-feature
+```
+
+## 📚 Kullanılan Kütüphaneler
+
+### Temel
+- **React Native**: 0.79.5
+- **Expo**: ~53.0.20
+- **TypeScript**: ~5.8.3
+
+### Navigation
+- **Expo Router**: ~5.1.4
+- **React Navigation**: ^7.1.6
+
+### UI ve Styling
+- **Expo Vector Icons**: ^14.1.0
+- **React Native Safe Area Context**: 5.4.0
+- **React Native Reanimated**: ~3.17.4
+
+### Storage ve Network
+- **AsyncStorage**: Latest
+- **Expo Constants**: ~17.1.7
+
+## 🤝 Katkıda Bulunma
+
+1. Repository'yi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+## 👥 Geliştirici Ekibi
+
+- **UI/UX Design**: Figma tasarım ekibi
+- **Mobile Development**: React Native geliştirici ekibi
+- **Backend API**: İZÜ BT departmanı
+
+## 📞 İletişim
+
+- **Destek**: support@izu.edu.tr
+- **Teknik**: it@izu.edu.tr
+- **Web**: https://www.izu.edu.tr
+
+## 🔄 Güncelleme Geçmişi
+
+### v1.0.0 (Mevcut)
+- ✅ Temel OBS funktions
+- ✅ Kullanıcı kimlik doğrulama
+- ✅ Ders ve not yönetimi
+- ✅ Ders programı görüntüleme
+- ✅ Profil yönetimi
+
+### v1.1.0 (Planlanan)
+- 🔄 Push bildirimleri
+- 🔄 Dark mode
+- 🔄 Çoklu dil desteği
+- 🔄 Gelişmiş önbellekleme
+
+---
+
+**© 2024 İstanbul Zaim Üniversitesi - Tüm hakları saklıdır.**
+# ReactNativeStudentInformationSystem
